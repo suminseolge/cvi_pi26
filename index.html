@@ -22,140 +22,143 @@
   html { scroll-behavior: smooth; }
   body {
     font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
-    background: var(--bg); color: var(--ink); line-height: 1.5; word-break: keep-all;
-    -webkit-font-smoothing: antialiased; letter-spacing: -0.3px; font-size: 14px;
+    background: var(--bg); color: var(--ink); line-height: 1.45; word-break: keep-all;
+    -webkit-font-smoothing: antialiased; letter-spacing: -0.3px; font-size: 13.5px;
   }
   .pt { color: var(--pink); font-weight: 700; }
   .ph { background: #FFF3BF; border-radius: 4px; padding: 1px 5px; font-weight: 700; color: #1A1A1A; }
 
   .topbar { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.96); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
-  .topbar .title { max-width: 640px; margin: 0 auto; padding: 12px 18px 6px; font-size: 15px; font-weight: 700; }
-  .tabs { max-width: 640px; margin: 0 auto; display: flex; gap: 16px; padding: 0 18px; overflow-x: auto; scrollbar-width: none; }
+  .topbar .title { max-width: 640px; margin: 0 auto; padding: 10px 16px 4px; font-size: 14px; font-weight: 700; }
+  .tabs { max-width: 640px; margin: 0 auto; display: flex; gap: 14px; padding: 0 16px; overflow-x: auto; scrollbar-width: none; }
   .tabs::-webkit-scrollbar { display: none; }
-  .tabs a { white-space: nowrap; text-decoration: none; color: var(--sub); font-size: 14px; font-weight: 600; padding: 6px 0 8px; border-bottom: 2px solid transparent; }
+  .tabs a { white-space: nowrap; text-decoration: none; color: var(--sub); font-size: 13px; font-weight: 600; padding: 5px 0 7px; border-bottom: 2px solid transparent; }
   .tabs a.active { color: var(--ink); border-color: var(--pink); font-weight: 700; }
 
-  main { max-width: 640px; margin: 0 auto; padding: 0 18px 50px; }
+  main { max-width: 640px; margin: 0 auto; padding: 0 16px 40px; }
 
-  .intro { padding: 32px 18px 28px; border-bottom: 8px solid #F5F7FA; margin: 0 -18px; }
+  .intro { padding: 24px 16px 20px; border-bottom: 8px solid #F5F7FA; margin: 0 -16px; }
   .intro .chip { background: var(--pink); }
-  .intro p { margin-top: 10px; font-size: 14.5px; color: var(--sub); }
+  .intro p { margin-top: 8px; font-size: 13.5px; color: var(--sub); }
   .intro p b { color: var(--ink); }
 
-  .find { display: flex; align-items: center; gap: 8px; background: var(--pink); padding: 6px 6px 6px 14px; margin-top: 18px; border-radius: 10px; }
-  .find label { color: #fff; font-weight: 700; font-size: 14px; white-space: nowrap; }
-  .find input { flex: 1; min-width: 0; border: 0; outline: 0; font-family: inherit; font-size: 14px; padding: 8px 10px; text-align: center; color: var(--ink); background: #fff; border-radius: 6px; }
+  .find { display: flex; align-items: center; gap: 6px; background: var(--pink); padding: 5px 5px 5px 12px; margin-top: 14px; border-radius: 8px; }
+  .find label { color: #fff; font-weight: 700; font-size: 13px; white-space: nowrap; }
+  .find input { flex: 1; min-width: 0; border: 0; outline: 0; font-family: inherit; font-size: 13px; padding: 7px 8px; text-align: center; color: var(--ink); background: #fff; border-radius: 6px; }
   .find input::placeholder { color: #AAA; }
-  .find button { border: 0; background: #222; color: #fff; font-family: inherit; font-size: 14px; font-weight: 700; padding: 8px 14px; cursor: pointer; white-space: nowrap; border-radius: 6px; }
+  .find button { border: 0; background: #222; color: #fff; font-family: inherit; font-size: 13px; font-weight: 700; padding: 7px 12px; cursor: pointer; white-space: nowrap; border-radius: 6px; }
   .find button:active { opacity: .85; }
-  .result { display: none; margin-top: 12px; background: var(--pink-soft); border: 1.5px solid #FAD2E1; border-radius: 16px; padding: 18px 14px; text-align: center; }
+  .result { display: none; margin-top: 10px; background: var(--pink-soft); border: 1.5px solid #FAD2E1; border-radius: 12px; padding: 14px 12px; text-align: center; }
   .result.show { display: block; animation: pop .3s ease; }
   @keyframes pop { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
-  .result .team { font-size: 24px; font-weight: 900; color: var(--pink); }
-  .result .members { margin-top: 10px; font-size: 14px; line-height: 1.6; color: var(--ink); }
+  .result .team { font-size: 20px; font-weight: 900; color: var(--pink); }
+  .result .members { margin-top: 8px; font-size: 13px; line-height: 1.5; color: var(--ink); }
   .result .members b { color: var(--pink); font-weight: 900; }
-  .result .msg { font-size: 14px; color: var(--sub); }
+  .result .msg { font-size: 13px; color: var(--sub); }
 
-  section { padding: 36px 0 16px; scroll-margin-top: 50px; }
-  .chip { display: inline-block; background: #1A1A1A; color: #fff; font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 6px; }
-  h2 { font-size: 24px; font-weight: 900; line-height: 1.35; margin: 12px 0 22px; letter-spacing: -0.5px; }
+  section { padding: 28px 0 12px; scroll-margin-top: 45px; }
+  .chip { display: inline-block; background: #1A1A1A; color: #fff; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 5px; }
+  h2 { font-size: 20px; font-weight: 900; line-height: 1.3; margin: 10px 0 18px; letter-spacing: -0.4px; }
 
   .steps { list-style: none; }
-  .steps li { position: relative; padding-left: 34px; padding-bottom: 24px; }
+  .steps li { position: relative; padding-left: 30px; padding-bottom: 20px; }
   .steps li:last-child { padding-bottom: 0; }
-  .steps .n { position: absolute; left: 0; top: 1px; width: 22px; height: 22px; border-radius: 50%; background: #1A1A1A; color: #fff; font-size: 12px; font-weight: 700; display: grid; place-items: center; }
-  .steps h3 { font-size: 16.5px; font-weight: 700; line-height: 1.4; }
-  .steps .desc { margin-top: 8px; padding-left: 12px; border-left: 2px solid var(--line); color: var(--sub); font-size: 14px; line-height: 1.55; }
+  .steps .n { position: absolute; left: 0; top: 1px; width: 20px; height: 20px; border-radius: 50%; background: #1A1A1A; color: #fff; font-size: 11px; font-weight: 700; display: grid; place-items: center; }
+  .steps h3 { font-size: 15px; font-weight: 700; line-height: 1.35; }
+  .steps .desc { margin-top: 6px; padding-left: 10px; border-left: 2px solid var(--line); color: var(--sub); font-size: 13px; line-height: 1.5; }
   .steps .desc b { color: var(--ink); font-weight: 600; }
-  .em-box { display: inline-block; margin-top: 6px; background: var(--pink); color: #fff; font-weight: 700; padding: 2px 8px; border-radius: 4px; font-size: 12px; }
+  .em-box { display: inline-block; margin-top: 4px; background: var(--pink); color: #fff; font-weight: 700; padding: 2px 6px; border-radius: 4px; font-size: 11px; }
 
-  .s1-wrap { display: flex; flex-direction: column; gap: 16px; }
-  .s1-map { margin-top: 10px; }
-  .s1-map img { width: 100%; display: block; border-radius: 12px; border: 1px solid var(--line); }
-  .s1-map figcaption { margin-top: 6px; font-size: 12px; color: var(--sub); text-align: center; }
+  .s1-wrap { display: flex; flex-direction: column; gap: 12px; }
+  .s1-map { margin-top: 8px; }
+  .s1-map img { width: 100%; display: block; border-radius: 10px; border: 1px solid var(--line); }
+  .s1-map figcaption { margin-top: 5px; font-size: 11.5px; color: var(--sub); text-align: center; }
 
-  .calc { margin-top: 14px; background: #FAF9F9; border-radius: 14px; padding: 14px; border: 1px solid var(--line); }
-  .calc-title { font-size: 15px; font-weight: 700; margin-bottom: 10px; color: var(--ink); display: flex; align-items: center; gap: 6px; }
+  .calc { margin-top: 12px; background: #FAF9F9; border-radius: 12px; padding: 12px; border: 1px solid var(--line); }
+  .calc-title { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--ink); display: flex; align-items: center; gap: 4px; }
   
   .calc-input-card {
-    background: #FFFFFF; border: 1.5px solid #E2E8F0; border-radius: 10px; padding: 10px;
-    display: flex; flex-direction: column; gap: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    background: #FFFFFF; border: 1.5px solid #E2E8F0; border-radius: 8px; padding: 8px;
+    display: flex; flex-direction: column; gap: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);
   }
   .calc-input-row { display: flex; gap: 6px; }
   .calc-input-card input {
-    border: 1px solid #E2E8F0; outline: none; padding: 8px 10px; border-radius: 6px;
-    font-size: 13.5px; font-family: inherit; color: var(--ink); background: #F8FAFC; width: 100%;
+    border: 1px solid #E2E8F0; outline: none; padding: 7px 8px; border-radius: 5px;
+    font-size: 12.5px; font-family: inherit; color: var(--ink); background: #F8FAFC; width: 100%;
   }
   .calc-input-card input:focus { border-color: var(--pink); background: #FFF; }
   .calc-input-card #placeIn { flex: 1.2; }
   .calc-input-card #amtIn { flex: 1; text-align: right; }
   .calc-input-card button {
-    background: var(--pink); color: #fff; border: 0; padding: 8px; border-radius: 6px;
-    font-weight: 700; font-size: 14px; cursor: pointer; transition: opacity .15s;
+    background: var(--pink); color: #fff; border: 0; padding: 7px; border-radius: 5px;
+    font-weight: 700; font-size: 13px; cursor: pointer; transition: opacity .15s;
   }
   .calc-input-card button:active { opacity: 0.85; }
 
-  .calc-box { margin-top: 10px; background: var(--pink-soft); border: 1.5px solid #FAD2E1; border-radius: 12px; padding: 12px 14px; }
-  .calc-total { font-size: 15px; font-weight: 900; color: var(--pink); }
-  .calc-left { margin-top: 2px; font-size: 13px; font-weight: 600; color: var(--sub); }
+  .calc-box { margin-top: 8px; background: var(--pink-soft); border: 1.5px solid #FAD2E1; border-radius: 10px; padding: 10px 12px; }
+  .calc-total { font-size: 14px; font-weight: 900; color: var(--pink); }
+  .calc-left { margin-top: 2px; font-size: 12px; font-weight: 600; color: var(--sub); }
   .calc-left.over { color: #D6001C; }
-  .calc-list { list-style: none; margin-top: 8px; font-size: 13.5px; color: var(--ink); max-height: 180px; overflow-y: auto; }
-  .calc-list li { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px dashed #FAD2E1; }
+  .calc-list { list-style: none; margin-top: 6px; font-size: 12.5px; color: var(--ink); max-height: 160px; overflow-y: auto; }
+  .calc-list li { display: flex; justify-content: space-between; align-items: center; padding: 5px 0; border-bottom: 1px dashed #FAD2E1; }
   .calc-list li:last-child { border-bottom: 0; }
-  .calc-list .del { border: 0; background: none; color: #999; font-size: 15px; cursor: pointer; padding: 0 4px; }
-  .calc-list .empty { color: #AAA; font-size: 12.5px; justify-content: flex-start; border: 0; padding: 4px 0; }
-  .calc-reset { display: block; margin: 6px 0 0 auto; border: 0; background: none; color: var(--sub); font-family: inherit; font-size: 12px; text-decoration: underline; cursor: pointer; }
+  .calc-list .del { border: 0; background: none; color: #999; font-size: 14px; cursor: pointer; padding: 0 4px; }
+  .calc-list .empty { color: #AAA; font-size: 12px; justify-content: flex-start; border: 0; padding: 2px 0; }
+  .calc-reset { display: block; margin: 4px 0 0 auto; border: 0; background: none; color: var(--sub); font-family: inherit; font-size: 11.5px; text-decoration: underline; cursor: pointer; }
 
-  .missions { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
-  .mission { background: var(--pink-soft); border: 1.5px solid #FAD2E1; border-radius: 10px; padding: 10px 12px; font-size: 13.5px; color: var(--ink); }
+  .missions { display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
+  .mission { background: var(--pink-soft); border: 1.5px solid #FAD2E1; border-radius: 8px; padding: 8px 10px; font-size: 12.5px; color: var(--ink); }
   .mission b { font-weight: 700; color: var(--pink); }
   
-  .sub-h { font-size: 15px; font-weight: 700; margin-top: 20px; color: var(--ink); display: flex; align-items: center; gap: 6px; }
+  .sub-h { font-size: 14px; font-weight: 700; margin-top: 16px; color: var(--ink); display: flex; align-items: center; gap: 4px; }
 
-  /* Kakao Group Chat Button & Slot */
   .kakao-btn {
     display: inline-flex; align-items: center; justify-content: center; gap: 6px;
-    background: var(--kakao-yellow); color: var(--kakao-brown); font-weight: 700; font-size: 13.5px;
-    padding: 10px 16px; border-radius: 8px; text-decoration: none; margin-top: 10px; width: 100%;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    background: var(--kakao-yellow); color: var(--kakao-brown); font-weight: 700; font-size: 13px;
+    padding: 9px 14px; border-radius: 8px; text-decoration: none; margin-top: 8px; width: 100%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: opacity 0.15s;
   }
   .kakao-btn:active { opacity: 0.9; }
 
-  .img-slot {
-    margin-top: 10px; border: 1.5px dashed #CBD5E1; border-radius: 12px; min-height: 120px;
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    font-size: 13px; color: #94A3B8; background: #F8FAFC; overflow: hidden; padding: 10px; text-align: center;
+  .qr-label {
+    font-size: 12.5px; font-weight: 700; color: var(--ink); margin-top: 12px; margin-bottom: 4px; text-align: center;
   }
-  .img-slot img { width: 100%; height: auto; display: block; border-radius: 8px; object-fit: contain; }
 
-  .games { display: grid; grid-template-columns: repeat(2,1fr); gap: 6px; margin-top: 10px; }
-  .game { background: #F7F7F7; border-radius: 8px; padding: 10px 12px; display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; font-weight: 600; color: var(--ink); }
-  .game span { font-size: 12px; color: var(--pink); font-weight: 700; }
+  .img-slot {
+    margin-top: 6px; border: 1.5px dashed #CBD5E1; border-radius: 10px; min-height: 100px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    font-size: 12px; color: #94A3B8; background: #F8FAFC; overflow: hidden; padding: 8px; text-align: center;
+  }
+  .img-slot img { width: 100%; height: auto; display: block; border-radius: 6px; object-fit: contain; }
+
+  .games { display: grid; grid-template-columns: repeat(2,1fr); gap: 6px; margin-top: 8px; }
+  .game { background: #F7F7F7; border-radius: 8px; padding: 8px 10px; display: flex; justify-content: space-between; align-items: center; font-size: 12.5px; font-weight: 600; color: var(--ink); }
+  .game span { font-size: 11px; color: var(--pink); font-weight: 700; }
   .game.all { grid-column: 1 / -1; background: var(--pink-soft); }
 
   .naver-map-card {
-    background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; padding: 14px; margin-top: 10px; text-align: center;
+    background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 10px; padding: 12px; margin-top: 8px; text-align: center;
   }
-  .naver-map-card .route { justify-content: center; font-size: 13.5px; font-weight: 700; margin-bottom: 8px; color: var(--ink); }
+  .naver-map-card .route { justify-content: center; font-size: 12.5px; font-weight: 700; margin-bottom: 6px; color: var(--ink); }
   .naver-map-card .route i { font-style: normal; color: var(--pink); padding: 0 2px; }
   .btn-naver {
-    display: inline-flex; align-items: center; justify-content: center; gap: 6px; margin-top: 8px;
-    text-decoration: none; font-size: 13.5px; font-weight: 700; color: #FFFFFF; background: #03C75A;
-    border-radius: 8px; padding: 9px 16px; width: 100%; transition: opacity 0.15s;
+    display: inline-flex; align-items: center; justify-content: center; gap: 6px; margin-top: 6px;
+    text-decoration: none; font-size: 12.5px; font-weight: 700; color: #FFFFFF; background: #03C75A;
+    border-radius: 6px; padding: 8px 14px; width: 100%; transition: opacity 0.15s;
   }
   .btn-naver:active { opacity: 0.9; }
 
-  hr.div { border: 0; height: 8px; background: #F5F7FA; margin: 30px -18px 0; }
-  footer { text-align: center; color: var(--sub); font-size: 13px; padding: 24px 18px 40px; }
+  hr.div { border: 0; height: 6px; background: #F5F7FA; margin: 24px -16px 0; }
+  footer { text-align: center; color: var(--sub); font-size: 12px; padding: 20px 16px 32px; }
 
   @media (min-width: 768px) {
     main, .topbar .title, .tabs { max-width: 680px; }
-    h2 { font-size: 28px; }
-    .steps h3 { font-size: 18px; }
-    .steps .desc { font-size: 15px; }
+    h2 { font-size: 24px; }
+    .steps h3 { font-size: 16.5px; }
+    .steps .desc { font-size: 14px; }
     .games { grid-template-columns: repeat(3,1fr); }
     .game.all { grid-column: auto; }
-    .s1-wrap { flex-direction: row; align-items: flex-start; gap: 20px; }
+    .s1-wrap { flex-direction: row; align-items: flex-start; gap: 16px; }
     .s1-wrap .steps { flex: 1; min-width: 0; }
     .s1-map { flex: 0 0 42%; margin-top: 0; }
   }
@@ -177,7 +180,7 @@
 
   <div class="intro">
     <span class="chip">걸어서 망원속으로</span>
-    <h2 style="margin-bottom:0; font-size:22px; margin-top:8px;">함께해요!<br><span class="pt" style="font-weight:900">망원-원정대</span> 🏃‍♀️</h2>
+    <h2 style="margin-bottom:0; font-size:20px; margin-top:6px;">함께해요!<br><span class="pt" style="font-weight:900">망원-원정대</span> 🏃‍♀️</h2>
     <p><b>10/23(금) 오전 10시</b> · 망원역 2번 출구로 나가는 <b class="pt">역사 안</b></p>
 
     <div class="find">
@@ -208,8 +211,8 @@
       </ol>
       <figure class="s1-map">
         <img src="mangwon_exit2.png" alt="망원역 2번 출구 위치 지도" onerror="this.style.display='none'; document.getElementById('map-fallback').style.display='block';">
-        <div id="map-fallback" style="display:none; padding: 20px; background: #F8FAFC; border: 1px dashed #CBD5E1; border-radius: 12px; text-align: center; color: var(--sub); font-size: 13px;">
-          📍 망원역 2번 출구 (약도 이미지: mangwon_exit2.png)
+        <div id="map-fallback" style="display:none; padding: 16px; background: #F8FAFC; border: 1px dashed #CBD5E1; border-radius: 10px; text-align: center; color: var(--sub); font-size: 12px;">
+          📍 망원역 2번 출구 (mangwon_exit2.png 등록 필요)
         </div>
         <figcaption>📍 망원역 2번 출구 위치</figcaption>
       </figure>
@@ -258,39 +261,39 @@
           <div class="mission"># <b>이것도 인연인데…</b> – 조원들과 가장 재미있는 사진 찍기</div>
         </div>
 
-        <!-- ITEM 1: KakaoTalk Group Chat Upload Instructions -->
+        <!-- Kakao Group Chat Upload Section -->
         <h4 class="sub-h">💬 카톡 그룹채팅에 사진을 업로드해요</h4>
-        
-        <!-- ITEM 2: Updated Text with '묶어서' Highlighted -->
         <div class="desc">
-          3가지 사진을 모두 찍었으면 대표 한 명이 아래 톡에 올려주세요<br>
+          대표 한 명이 그룹채팅에 사진을 올려주세요<br>
           <span style="font-weight:700; color:var(--ink);">3장의 사진을 꼭 <mark class="ph">묶어서</mark> 올려주세요!</span>
           
-          <!-- ITEM 3: Kakao Group Chat Link and QR Image Slot -->
-          <a class="kakao-btn" href="#" onclick="alert('카카오톡 그룹채팅 링크를 입력해주세요!'); return false;">
+          <!-- Kakao Chat Link Button -->
+          <a class="kakao-btn" href="https://open.kakao.com/o/gfjIRwTi" target="_blank">
             💬 카톡 그룹채팅 참여하기
           </a>
 
+          <!-- QR Code Label & Image Slot -->
+          <div class="qr-label">QR로 그룹채팅 접속하기</div>
           <div class="img-slot">
             <img src="groupqr.png" alt="그룹채팅 QR 코드" onerror="this.onerror=null; this.src='groupqr.jpg'; this.onerror=function(){this.style.display='none'; document.getElementById('qr-fallback').style.display='block';}">
             <div id="qr-fallback" style="display:none;">
               📱 <b>그룹채팅 QR 이미지</b><br>
-              (groupqr.png 또는 groupqr.jpg 파일 등록 필요)
+              (groupqr.png 또는 groupqr.jpg)
             </div>
           </div>
         </div>
 
-        <!-- ITEM 4: Updated Emoticon Reaction Text -->
-        <h4 class="sub-h">💗 마음에 드는 게시물을 꾸욱 눌러서 이모티콘을 남겨주세요</h4>
+        <!-- Emoticon Reaction Section -->
+        <h4 class="sub-h">💗 마음에 드는 게시물을 꾸욱 눌러서<br>이모티콘을 남겨주세요</h4>
         <div class="desc">
           이모티콘 수로 순위를 정해요
           
-          <!-- ITEM 5: Custom Emoticon Reaction Image Slot -->
+          <!-- Reaction Image Slot (Updated to 'reaction.png') -->
           <div class="img-slot">
-            <img src="emoticon.png" alt="이모티콘 남기기 설명" onerror="this.onerror=null; this.src='emoticon.jpg'; this.onerror=function(){this.style.display='none'; document.getElementById('emo-fallback').style.display='block';}">
+            <img src="reaction.png" alt="이모티콘 남기기 설명" onerror="this.onerror=null; this.src='reaction.jpg'; this.onerror=function(){this.style.display='none'; document.getElementById('emo-fallback').style.display='block';}">
             <div id="emo-fallback" style="display:none;">
-              👍 <b>이모티콘 남기기 캡처 이미지</b><br>
-              (emoticon.png 또는 emoticon.jpg 파일 등록 필요)
+              👍 <b>이모티콘 반응 설명 이미지</b><br>
+              (reaction.png 또는 reaction.jpg)
             </div>
           </div>
         </div>
@@ -359,7 +362,7 @@
 <footer>오늘 하루, 망원에서 행복을 수집해요 💗</footer>
 
 <script>
-  // 탭 활성화 Intersection Observer
+  // Tabs active state Observer
   const links = [...document.querySelectorAll('.tabs a')];
   if('IntersectionObserver' in window){
     const io = new IntersectionObserver(es => es.forEach(e => {
@@ -367,10 +370,8 @@
     }), {rootMargin: '-20% 0px -70% 0px'});
     links.forEach(l => io.observe(document.querySelector(l.hash)));
   }
-</script>
 
-<script>
-  // 조원 데이터 및 검색 로직
+  // Team search logic
   const TEAMS = {
     1: ["김재화","이강은","김미하","김주경","신동식"],
     2: ["이수정","김태호","장광순","주현태","이용석"],
@@ -398,17 +399,15 @@
     const no = Object.keys(TEAMS).find(k => TEAMS[k].includes(name));
     if(!no) return show('<div class="msg">\'' + name + '\' 님을 찾을 수 없어요 😢<br>이름을 다시 확인해주세요</div>');
     const list = TEAMS[no].map(n => n === name ? '<b>' + n + '</b>' : n).join(', ');
-    show('<div class="team">' + no + '조' + (no === '9' ? ' <span style="font-size:14px;color:var(--sub)">(운영)</span>' : '') + '</div>'
+    show('<div class="team">' + no + '조' + (no === '9' ? ' <span style="font-size:13px;color:var(--sub)">(운영)</span>' : '') + '</div>'
        + '<div class="members">원정' + no + '조: ' + list + '</div>');
     input.blur();
   }
 
   document.getElementById('findBtn').addEventListener('click', findTeam);
   input.addEventListener('keydown', e => { if(e.key === 'Enter') findTeam(); });
-</script>
 
-<script>
-  // 금액 계산기 로직
+  // Budget Calculator logic
   const BUDGET = 40000, KEY = 'mangwon_calc';
   const store = {
     get() { try { return JSON.parse(window.localStorage.getItem(KEY) || '[]'); } catch(e) { return []; } },
@@ -465,13 +464,12 @@
   });
 
   document.getElementById('resetBtn').addEventListener('click', () => {
-    if(confirm('입력한 사용 내역을 모두 지울까요?')) {
-      items = [];
-      render();
-    }
+    items = [];
+    render();
   });
 
   render();
 </script>
 </body>
 </html>
+```
