@@ -120,9 +120,16 @@
   }
   .kakao-btn:active { opacity: 0.9; }
 
-  .qr-label {
-    font-size: 12.5px; font-weight: 700; color: var(--ink); margin-top: 12px; margin-bottom: 4px; text-align: left; padding-left: 2px;
+  /* Accordion for QR Code */
+  .qr-accordion { margin-top: 10px; border: 1px solid var(--line); border-radius: 8px; background: #FFF; overflow: hidden; }
+  .qr-accordion summary {
+    font-size: 12.5px; font-weight: 700; color: var(--ink); padding: 10px 12px; cursor: pointer;
+    user-select: none; list-style: none; display: flex; justify-content: space-between; align-items: center;
   }
+  .qr-accordion summary::-webkit-details-marker { display: none; }
+  .qr-accordion summary::after { content: '▼'; font-size: 10px; color: var(--sub); transition: transform 0.2s; }
+  .qr-accordion[open] summary::after { transform: rotate(180deg); }
+  .qr-accordion .img-slot { margin: 0 10px 10px; }
 
   .img-slot {
     margin-top: 6px; border: 1.5px dashed #CBD5E1; border-radius: 10px; min-height: 100px;
@@ -147,6 +154,8 @@
     border-radius: 6px; padding: 8px 14px; width: 100%; transition: opacity 0.15s;
   }
   .btn-naver:active { opacity: 0.9; }
+
+  .address-txt { font-size: 12.5px; color: var(--sub); text-align: center; margin-bottom: 6px; word-break: keep-all; }
 
   hr.div { border: 0; height: 6px; background: #F5F7FA; margin: 24px -16px 0; }
   footer { text-align: center; color: var(--sub); font-size: 12px; padding: 20px 16px 32px; }
@@ -272,15 +281,17 @@
             💬 카톡 그룹채팅 참여하기
           </a>
 
-          <!-- QR Code Label & Image Slot -->
-          <div class="qr-label">QR로 그룹채팅 접속하기</div>
-          <div class="img-slot">
-            <img src="groupqr.png" alt="그룹채팅 QR 코드" onerror="this.onerror=null; this.src='groupqr.jpg'; this.onerror=function(){this.style.display='none'; document.getElementById('qr-fallback').style.display='block';}">
-            <div id="qr-fallback" style="display:none;">
-              📱 <b>그룹채팅 QR 이미지</b><br>
-              (groupqr.png 또는 groupqr.jpg)
+          <!-- Accordion QR Code Section -->
+          <details class="qr-accordion">
+            <summary>📱 QR로 그룹채팅 접속하기</summary>
+            <div class="img-slot">
+              <img src="groupqr.png" alt="그룹채팅 QR 코드" onerror="this.onerror=null; this.src='groupqr.jpg'; this.onerror=function(){this.style.display='none'; document.getElementById('qr-fallback').style.display='block';}">
+              <div id="qr-fallback" style="display:none;">
+                📱 <b>그룹채팅 QR 이미지</b><br>
+                (groupqr.png 또는 groupqr.jpg)
+              </div>
             </div>
-          </div>
+          </details>
         </div>
 
         <!-- Photo Voting Section -->
@@ -367,21 +378,34 @@
     <span class="chip">Chapter 04</span>
     <h2>성미골 망원본점에서<br>점심 먹어요 🍽️</h2>
 
-    <!-- 1. 성미골 위치보기 버튼을 ① 상단에 배치 -->
+    <!-- 주소 텍스트 및 네이버 지도 버튼 -->
     <div class="naver-map-card" style="margin-bottom: 16px;">
-      <a class="btn-naver" href="https://naver.me/GgWk1m4h" target="_blank">
+      <div class="address-txt">📍 서울 마포구 월드컵로 137 102호 (성미골)</div>
+      <a class="btn-naver" href="https://naver.me/GgWk1m4h" target="_blank" style="margin-top: 0;">
         📍 네이버 지도로 성미골 위치 보기 ›
       </a>
     </div>
 
     <ol class="steps">
+      <!-- 1. 도보로 이동 시 -->
       <li><span class="n">1</span>
-        <h3>성미골 이동 경로 안내 🚌</h3>
+        <h3>도보로 이동 시 🏃‍♀️</h3>
         <div class="desc">
-          서울 마포구 월드컵로 137 102호 (성미골)
+          <div class="img-slot" style="margin-top: 8px;">
+            <img src="walk.png" alt="도보 이동 경로 안내" onerror="this.onerror=null; this.src='walk.jpg'; this.onerror=function(){this.style.display='none'; document.getElementById('walk-fallback').style.display='block';}">
+            <div id="walk-fallback" style="display:none;">
+              🚶‍♂️ <b>도보 이동 경로 이미지</b><br>
+              (walk.png 또는 walk.jpg)
+            </div>
+          </div>
+        </div>
+      </li>
 
-          <!-- 2. 첨부이미지 기반 경로 텍스트/UI 구현 -->
-          <div style="margin-top: 10px; background: #FFFFFF; border: 1px solid var(--line); border-radius: 10px; padding: 12px; font-size: 12.5px; color: var(--ink);">
+      <!-- 2. 대중교통으로 이동 시 -->
+      <li><span class="n">2</span>
+        <h3>대중교통으로 이동 시 🚌</h3>
+        <div class="desc">
+          <div style="margin-top: 6px; background: #FFFFFF; border: 1px solid var(--line); border-radius: 10px; padding: 12px; font-size: 12.5px; color: var(--ink);">
             
             <div style="display: flex; align-items: center; gap: 8px; font-weight: 700; color: #1E40AF; margin-bottom: 8px;">
               <span style="background: #2563EB; color: #FFF; font-size: 10px; padding: 2px 6px; border-radius: 4px;">출발</span>
