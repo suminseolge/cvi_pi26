@@ -303,7 +303,7 @@
       <li><span class="n">3</span>
         <h3>망원시장 이모저모</h3>
         <div class="desc">
-          위치
+          <h4 class="sub-h">📍 망원시장 위치 안내</h4>
           <div class="img-slot">
             <img src="marketmap.png" alt="망원시장 지도" onerror="this.onerror=null; this.src='marketmap.jpg'; this.onerror=function(){this.style.display='none'; document.getElementById('marketmap-fallback').style.display='block';}">
             <div id="marketmap-fallback" style="display:none;">
@@ -327,7 +327,7 @@
         <div class="desc">
           <div class="naver-map-card">
             <div class="route">망원역 <i>→</i> 망원시장 <i>→</i> 망원한강공원 배구장</div>
-            <a class="btn-naver" href="https://map.naver.com/p/search/%EB%A7%9D%EC%9B%90%ED%95%9C%EA%B0%95%EA%B3%B5%EC%9B%90%20%EB%B0%B0%EA%B5%AC%EC%9E%A5" target="_blank">
+            <a class="btn-naver" href="https://naver.me/x67b5BSc" target="_blank">
               📍 네이버 지도로 배구장 위치 확인하기 ›
             </a>
           </div>
@@ -366,14 +366,60 @@
   <section id="s4">
     <span class="chip">Chapter 04</span>
     <h2>성미골 망원본점에서<br>점심 먹어요 🍽️</h2>
+
+    <!-- 1. 성미골 위치보기 버튼을 ① 상단에 배치 -->
+    <div class="naver-map-card" style="margin-bottom: 16px;">
+      <a class="btn-naver" href="https://naver.me/GgWk1m4h" target="_blank">
+        📍 네이버 지도로 성미골 위치 보기 ›
+      </a>
+    </div>
+
     <ol class="steps">
       <li><span class="n">1</span>
-        <h3>도보로 이동해요</h3>
-        <div class="desc">서울 마포구 월드컵로 137 102호
-          <div class="naver-map-card">
-            <a class="btn-naver" href="https://naver.me/GgWk1m4h" target="_blank">
-              📍 네이버 지도로 성미골 위치 보기 ›
-            </a>
+        <h3>성미골 이동 경로 안내 🚌</h3>
+        <div class="desc">
+          서울 마포구 월드컵로 137 102호 (성미골)
+
+          <!-- 2. 첨부이미지 기반 경로 텍스트/UI 구현 -->
+          <div style="margin-top: 10px; background: #FFFFFF; border: 1px solid var(--line); border-radius: 10px; padding: 12px; font-size: 12.5px; color: var(--ink);">
+            
+            <div style="display: flex; align-items: center; gap: 8px; font-weight: 700; color: #1E40AF; margin-bottom: 8px;">
+              <span style="background: #2563EB; color: #FFF; font-size: 10px; padding: 2px 6px; border-radius: 4px;">출발</span>
+              <span>망원한강공원 배구장</span>
+            </div>
+
+            <div style="border-left: 2px dashed #CBD5E1; margin-left: 14px; padding-left: 14px; display: flex; flex-direction: column; gap: 10px; margin-bottom: 8px;">
+              
+              <div style="color: var(--sub);">
+                🚶‍♂️ <b>태양빌딩 정류장까지 걷기</b>
+                <div style="font-size: 11.5px; color: #888;">9분, 571m 이동</div>
+              </div>
+
+              <div>
+                🚌 <b>태양빌딩 정류장(14508) 승차</b>
+                <div style="margin-top: 2px;">
+                  <span style="background: #55B047; color: #FFF; font-size: 10.5px; font-weight: 700; padding: 1px 5px; border-radius: 3px;">마을</span>
+                  <b style="color: #55B047;">마포09</b>
+                </div>
+                <div style="font-size: 11.5px; color: #888; margin-top: 1px;">4분, 6개 정류장 이동</div>
+              </div>
+
+              <div style="color: var(--sub);">
+                🛑 <b>구)망원우체국사거리 정류장(14585) 하차</b>
+              </div>
+
+              <div style="color: var(--sub);">
+                🏃‍♂️ <b>성미골까지 걷기</b>
+                <div style="font-size: 11.5px; color: #888;">5분, 339m 이동</div>
+              </div>
+
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 8px; font-weight: 700; color: #DC2626;">
+              <span style="background: #DC2626; color: #FFF; font-size: 10px; padding: 2px 6px; border-radius: 4px;">도착</span>
+              <span>성미골</span>
+            </div>
+
           </div>
         </div>
       </li>
